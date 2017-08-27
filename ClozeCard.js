@@ -1,4 +1,9 @@
 var ClozeCard = function(text, cloze){
+	if (!(this instanceof ClozeCard)) { 
+    
+    // the constructor was called without "new".
+    return new ClozeCard(text,name);
+  } 
 	this.fullText = text;
 	this.cloze = cloze;
 	function createPartial(){
